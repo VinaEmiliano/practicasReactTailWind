@@ -12,6 +12,7 @@ function App() {
   
   const guardarComentarios = (comentario) => {
     comentario.id = generarId();
+    comentario.fecha = Date.now();
     setComentarios([...comentarios, comentario])
     setModal(false)
   }
@@ -20,7 +21,9 @@ function App() {
     <>
       <Header />
       <Body />
-      <ListaDeComentarios />
+      <ListaDeComentarios
+        comentarios= {comentarios}
+      />
       <Footer 
         modal= {modal}
         setModal= {setModal}
