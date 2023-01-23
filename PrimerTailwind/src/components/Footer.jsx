@@ -1,9 +1,11 @@
 import { useState } from "react"
 import VentanaModal from "./VentanaModal"
 
-const Footer = ({modal,setModal,guardarComentarios}) => {
+const Footer = ({modal, setModal, guardarComentarios, editarComentario, setEditarComentarios}) => {
     const handleModal = () => {
         setModal(true)
+        setEditarComentarios('')
+        
     }
     
     
@@ -13,7 +15,12 @@ const Footer = ({modal,setModal,guardarComentarios}) => {
             <div>
                 {modal 
                     ? 
-                    <VentanaModal modal= {modal} setModal={setModal} guardarComentarios={guardarComentarios}/> 
+                    <VentanaModal 
+                        modal= {modal} 
+                        setModal={setModal} 
+                        guardarComentarios={guardarComentarios}
+                        editarComentario= {editarComentario}
+                    /> 
                     :             
                     <div className="flex flex-col items-center mx-auto p-4 rounded-3xl shadow-2xl w-3/4 bg-slate-500">
                     <p className="font-bold font-serif text-4xl text-orange-400 my-2 py-1">Deja tu comentario</p>
@@ -26,5 +33,6 @@ const Footer = ({modal,setModal,guardarComentarios}) => {
 }
 
 export default Footer
+
 
 

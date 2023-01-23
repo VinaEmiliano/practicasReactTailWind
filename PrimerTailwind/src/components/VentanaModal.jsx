@@ -1,11 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Mensaje from "./Mensaje"
 
 
-const VentanaModal = ({modal, setModal, guardarComentarios}) => {
+const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario}) => {
   const [email, setEmail] = useState('')
   const [textArea, setTextArea] = useState('')
   const [mensaje, setMensaje] = useState('')
+  const [id, setId] = useState('')
+
+  useEffect( () => {
+    if(Object.keys(editarComentario).length > 0) {
+      setEmail(editarComentario.email)
+      setTextArea(editarComentario.textArea)
+      setMensaje(editarComentario.setMensaje)
+      setId(editarComentario.id)
+    }
+  }, [] )
 
 
   const handleCloseModal = () => {
@@ -23,7 +33,7 @@ const VentanaModal = ({modal, setModal, guardarComentarios}) => {
       return
     }
     
-    guardarComentarios({email, textArea})
+    guardarComentarios({email, textArea, id})
   }
 
   return (
@@ -38,7 +48,7 @@ const VentanaModal = ({modal, setModal, guardarComentarios}) => {
         onSubmit={handleSubmit}
         >
         
-        <legend className="text-4xl font-semibold">Deja tu comentario</legend>
+        <legend className="text-4xl font-semibold">{editarComentario.email ? 'Edita tu comentario' : 'Deja tu comentario'}</legend>
         
         {mensaje && <Mensaje>{mensaje}</Mensaje>}
         
@@ -63,12 +73,13 @@ const VentanaModal = ({modal, setModal, guardarComentarios}) => {
           onChange= {e => setTextArea(e.target.value)}>
         </textarea>
         
-        <button
+        <input
           id="btn-submit"
           type="submit"
-          className="text-4xl font-semibold p-4 m-4 bg-fuchsia-600 rounded-3xl"
-          >Enviar comentario
-        </button>
+          className="text-2xl font-semibold p-4 m-4 bg-fuchsia-600 rounded-3xl"
+          value={editarComentario.email ? 'Guardar cambios' : 'Agregar comentario'}
+          >
+        </input>
       </form>
     
     </section>
