@@ -2,11 +2,11 @@ import { useState, useEffect } from "react"
 import Mensaje from "./Mensaje"
 
 
-const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario}) => {
+const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id, setId}) => {
   const [email, setEmail] = useState('')
   const [textArea, setTextArea] = useState('')
   const [mensaje, setMensaje] = useState('')
-  const [id, setId] = useState('')
+/*   const [id, setId] = useState('') */
 
   useEffect( () => {
     if(Object.keys(editarComentario).length > 0) {

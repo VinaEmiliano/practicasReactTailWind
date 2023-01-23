@@ -1,7 +1,7 @@
 import { useState } from "react"
 import VentanaModal from "./VentanaModal"
 
-const Footer = ({modal, setModal, guardarComentarios, editarComentario, setEditarComentarios}) => {
+const Footer = ({modal, setModal, guardarComentarios, editarComentario, setEditarComentarios,id, setId}) => {
     const handleModal = () => {
         setModal(true)
         setEditarComentarios('')
@@ -20,6 +20,8 @@ const Footer = ({modal, setModal, guardarComentarios, editarComentario, setEdita
                         setModal={setModal} 
                         guardarComentarios={guardarComentarios}
                         editarComentario= {editarComentario}
+                        id= {id}
+                        setId= {setId}
                     /> 
                     :             
                     <div className="flex flex-col items-center mx-auto p-4 rounded-3xl shadow-2xl w-3/4 bg-slate-500">

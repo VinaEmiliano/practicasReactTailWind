@@ -10,6 +10,7 @@ function App() {
   const [modal, setModal] = useState(false)
   const [comentarios, setComentarios] = useState([])
   const [editarComentario, setEditarComentarios] = useState({})
+  const [id, setId] = useState('')
 
   useEffect(() => {
     if(Object.keys(editarComentario).length > 0) {
@@ -20,9 +21,7 @@ function App() {
   const guardarComentarios = (comentario) => {
     if(comentario.id){
       // si vamos a actualizar un comentario
-      const comentariosActualizados = comentarios.map( comentarioState => {
-        comentarioState.id === comentario.id ? comentario : comentarioState
-      })
+      const comentariosActualizados = comentarios.map( comentarioState => comentarioState.id === comentario.id ? comentario : comentarioState)
       setComentarios(comentariosActualizados)
     }else{
       // si hay un comentario nuevo
@@ -40,6 +39,8 @@ function App() {
       <ListaDeComentarios
         comentarios= {comentarios}
         setEditarComentarios= {setEditarComentarios}
+        id= {id}
+        setId= {setId}
       />
       <Footer 
         modal= {modal}
@@ -47,6 +48,8 @@ function App() {
         guardarComentarios= {guardarComentarios}
         editarComentario= {editarComentario}
         setEditarComentarios= {setEditarComentarios}
+        id= {id}
+        setId= {setId}
       />
     </>
   )

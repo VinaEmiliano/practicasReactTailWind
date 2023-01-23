@@ -2,7 +2,7 @@ import { useState } from "react"
 import Mensaje from "./Mensaje"
 import Comentario from "./Comentario"
 
-const ListaDeComentarios = ({comentarios, setEditarComentarios,editarComentario}) => {
+const ListaDeComentarios = ({comentarios, setEditarComentarios}) => {
     return (
         <> 
             {comentarios.length ? 'Lista de comentarios' : 'No hay comentarios'}

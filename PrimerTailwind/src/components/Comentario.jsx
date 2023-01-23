@@ -1,7 +1,7 @@
 import React from 'react'
 import { formatearFecha } from '../helpers'
 
-const Comentario = ({comentario, setEditarComentarios}) => {
+const Comentario = ({comentario, setEditarComentarios, setId}) => {
     const {email, textArea, id, fecha} = comentario
 
     const handleEdit = (e) => {
