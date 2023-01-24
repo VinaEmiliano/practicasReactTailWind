@@ -11,6 +11,7 @@ function App() {
   const [comentarios, setComentarios] = useState([])
   const [editarComentario, setEditarComentarios] = useState({})
   const [id, setId] = useState('')
+  const [fecha, setFecha] = useState('')
 
   useEffect(() => {
     if(Object.keys(editarComentario).length > 0) {
@@ -23,6 +24,7 @@ function App() {
       // si vamos a actualizar un comentario
       const comentariosActualizados = comentarios.map( comentarioState => comentarioState.id === comentario.id ? comentario : comentarioState)
       setComentarios(comentariosActualizados)
+      setEditarComentarios({})
     }else{
       // si hay un comentario nuevo
       comentario.id = generarId();
@@ -30,6 +32,11 @@ function App() {
       setComentarios([...comentarios, comentario])
     }
     setModal(false)
+  }
+
+  const eliminarComentario = (id) => {
+    const comentariosActualizados = comentarios.filter( comentario => comentario.id !== id)
+    setComentarios(comentariosActualizados)
   }
 
   return (
@@ -41,6 +48,9 @@ function App() {
         setEditarComentarios= {setEditarComentarios}
         id= {id}
         setId= {setId}
+        fecha= {fecha}
+        setFecha= {setFecha}
+        eliminarComentario= {eliminarComentario}
       />
       <Footer 
         modal= {modal}

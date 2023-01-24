@@ -22,6 +22,7 @@ const Footer = ({modal, setModal, guardarComentarios, editarComentario, setEdita
                         editarComentario= {editarComentario}
                         id= {id}
                         setId= {setId}
+                        setEditarComentarios= {setEditarComentarios}
                     /> 
                     :             
                     <div className="flex flex-col items-center mx-auto p-4 rounded-3xl shadow-2xl w-3/4 bg-slate-500">

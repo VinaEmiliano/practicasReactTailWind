@@ -2,11 +2,13 @@ import { useState, useEffect } from "react"
 import Mensaje from "./Mensaje"
 
 
-const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id, setId}) => {
+const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id, setId, setEditarComentarios}) => {
   const [email, setEmail] = useState('')
   const [textArea, setTextArea] = useState('')
   const [mensaje, setMensaje] = useState('')
-/*   const [id, setId] = useState('') */
+  const [fecha, setFecha] = useState('')
+
+
 
   useEffect( () => {
     if(Object.keys(editarComentario).length > 0) {
@@ -14,12 +16,14 @@ const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id
       setTextArea(editarComentario.textArea)
       setMensaje(editarComentario.setMensaje)
       setId(editarComentario.id)
+      setFecha(editarComentario.fecha)
     }
   }, [] )
 
 
   const handleCloseModal = () => {
     setModal(false)
+    setEditarComentarios({})
   }
 
   const handleSubmit = (e) => {
@@ -33,7 +37,7 @@ const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id
       return
     }
     
-    guardarComentarios({email, textArea, id})
+    guardarComentarios({email, textArea, id, fecha})
   }
 
   return (

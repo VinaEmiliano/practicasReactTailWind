@@ -1,7 +1,7 @@
 import React from 'react'
 import { formatearFecha } from '../helpers'
 
-const Comentario = ({comentario, setEditarComentarios, setId}) => {
+const Comentario = ({comentario, setEditarComentarios, setId, eliminarComentario}) => {
     const {email, textArea, id, fecha} = comentario
 
     const handleEdit = (e) => {
@@ -20,10 +20,9 @@ const Comentario = ({comentario, setEditarComentarios, setId}) => {
                             <p className=' py-2'>{textArea}</p>
                             <div className='flex justify-center space-x-20 mt-3'>
                                 <button className=' py-2 px-8 border-2' onClick={handleEdit}>Editar</button>
-                                <button className=' py-2 px-8 border-2'>Eliminar</button>
+                                <button className=' py-2 px-8 border-2'onClick={() => eliminarComentario(id)} >Eliminar</button>
                             </div>
                         </div>
-
                     </div>
     )
 }
