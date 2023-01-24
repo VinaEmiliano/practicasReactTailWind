@@ -5,7 +5,7 @@ import Comentario from "./Comentario"
 const ListaDeComentarios = ({comentarios, setEditarComentarios, eliminarComentario}) => {
     return (
         <> 
-            {comentarios.length &&<p className="flex justify-center font-bold text-4xl  text-fuchsia-600">Lista de comentarios</p> }
+            {comentarios.length > 0 && <p className="flex justify-center font-bold text-4xl  text-fuchsia-600">Lista de comentarios</p> }
 
             {comentarios.map( comentario => (
                 <Comentario

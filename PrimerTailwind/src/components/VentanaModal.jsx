@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import Mensaje from "./Mensaje"
 
 
-const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, id, setId, setEditarComentarios}) => {
+const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, setEditarComentarios}) => {
   const [email, setEmail] = useState('')
   const [textArea, setTextArea] = useState('')
   const [mensaje, setMensaje] = useState('')
   const [fecha, setFecha] = useState('')
-
+  const [id, setId] = useState('')
 
 
   useEffect( () => {

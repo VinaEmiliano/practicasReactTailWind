@@ -8,9 +8,12 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [modal, setModal] = useState(false)
-  const [comentarios, setComentarios] = useState([])
+  const [comentarios, setComentarios] = useState(
+    localStorage.getItem('comentarios') ? JSON.parse(localStorage.getItem('comentarios')) : []
+  )
   const [editarComentario, setEditarComentarios] = useState({})
-  const [id, setId] = useState('')
+
+
   const [fecha, setFecha] = useState('')
 
   useEffect(() => {
@@ -39,6 +42,10 @@ function App() {
     setComentarios(comentariosActualizados)
   }
 
+  useEffect( () => {
+    localStorage.setItem('comentarios', JSON.stringify(comentarios) ?? [])
+  },[comentarios])
+
   return (
     <>
       <Header />
@@ -46,8 +53,6 @@ function App() {
       <ListaDeComentarios
         comentarios= {comentarios}
         setEditarComentarios= {setEditarComentarios}
-        id= {id}
-        setId= {setId}
         fecha= {fecha}
         setFecha= {setFecha}
         eliminarComentario= {eliminarComentario}
@@ -58,8 +63,6 @@ function App() {
         guardarComentarios= {guardarComentarios}
         editarComentario= {editarComentario}
         setEditarComentarios= {setEditarComentarios}
-        id= {id}
-        setId= {setId}
       />
     </>
   )
