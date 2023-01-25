@@ -12,7 +12,7 @@ const Comentario = ({comentario, setEditarComentarios, eliminarComentario}) => {
 
     return (
                     <div>
-                        <div className=' flex flex-col mx-auto p-4 my-4 rounded-3xl w-3/4 border-4 shadow-2xl bg-slate-500 text-white font-semibold'>
+                        <div className=' flex flex-col mx-auto p-4 my-4 rounded-3xl border-4 shadow-2xl bg-slate-500 text-white font-semibold max-h-44 max-w-sm'>
                             <div className='flex space-x-20 border-b-2 py-1'>
                             <p className=''>{email}</p>
                             <p className='text-sm'>{formatearFecha(fecha)}</p>
