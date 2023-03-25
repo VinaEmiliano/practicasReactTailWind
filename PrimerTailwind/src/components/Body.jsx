@@ -7,7 +7,7 @@ const Body = () => {
             <section className="w-full text-center mx-auto md:w-10/12 lg:">
                 <article className="flex flex-col items-center  m-8 p-5">
                     <h1 className="text-6xl font-bold text-fuchsia-500">Conoce nuestra nueva aplicacion Tech</h1>
-                    <img src="../public/img1.webp" alt="aplicacion rocket" className="rounded-3xl  max-h-96 m-8"/>
+                    <img src="../img1.webp" alt="aplicacion rocket" className="rounded-3xl  max-h-96 m-8"/>
                     <p className=" font-sans text-3xl text-orange-300">Lorem ipsum dolor sit amet, consectetur adipisicinAdipisci ratione assumenda cumque deserunt nesciunt! Odit cumque a ipsum quasi in quidem, natus, voluptas saepe eligendi beatae vero similique necessitatibus praesentium quam id aliquid repudiandae illo nam tempore illum delectus dolorem. Dolore, officia cupiditate libero temporibus qui iusto voluptate ratione. Vero laboriosam illo laudantium vitae, totam sequi iste sed numquam, quos ea voluptate consequuntur voluptatibus! Voluptatibus, ab eveniet modi libero pariatur dicta maiores nemo nobis? Ut quam reiciendis dicta animi culpa! Quibusdam eveniet, nemo praesentium, magnam sapiente, quo adipisci aut natus voluptate cum dignissimos tempore ducimus neque et rem? Iusto facere error dolorem ducimus obcaecati ab quasi saepe aperiam tempora facilis dignissimos perferendis, maiores, cupiditate cum suscipit. Ad reprehenderit aliquid eligendi nisi blanditiis natus quo accusamus. Nemo, quam dolor culpa eveniet fuga enim quidem! Atque in vero dolorum eos officia repellendus.</p>
                 </article>
                 <div className="lg:grid grid-cols-2	">
