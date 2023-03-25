@@ -13,12 +13,12 @@ const Body = () => {
                 <div className="lg:grid grid-cols-2	">
                     <article className="flex flex-col items-center  m-8 p-5"> 
                         <h2 className="text-5xl font-bold text-fuchsia-600">Mejora de dispositivos</h2>
-                        <img src="../public/img2.webp" alt="mejora de dispositivos" className="rounded-3xl  max-h-96 m-8"/>
+                        <img src="../img2.webp" alt="mejora de dispositivos" className="rounded-3xl  max-h-96 m-8"/>
                         <p className=" font-sans text-3xl text-orange-300">Lorem ipsum dolor sit amet consectetur,ssumenda nam exercitationem distinctio, molestiae consequuntur voluptatibus dolor ducimus, iste maiores perspiciatis eius nihil? Ullam ab minus perferendis omnis, nemo distinctio numquam iste? Laborum magnam eaque vero blanditiis ipsum architecto, sapiente consectetur, provident sed suscipit eum aperiam, quidem dolorum eius? Laudantium dolore adipisci placeat accusamus at obcaecati qui suscipit? Consequatur suscipit adipisci cupiditate, quidem qui minus eveniet blanditiis nihil vero earum explicabo animi.</p>
                     </article>
                     <article className="flex flex-col items-center  m-8 p-5">
                         <h2 className="text-5xl font-bold text-fuchsia-600">Nuevos lanzamientos</h2>
-                        <img src="../public/img3.webp" alt="nuevos lanzamientos" className="rounded-3xl  max-h-96 m-8"/>
+                        <img src="../img3.webp" alt="nuevos lanzamientos" className="rounded-3xl  max-h-96 m-8"/>
                         <p className=" font-sans text-3xl text-orange-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  adipisicing elit. Praesentium animi pariatur quibusdam molestias consectetur, quaerat in quas a g elit. Minus dignissimos ipsam incidunt vero delectus magnam amet beatae tempora!  Fuga, atque blanditiis doloribus eos ducimus nihil rem obcaecati sit! Ut amet error enim, nobis soluta cupiditate nostrum facilis debitis fugit iste?</p>
                     </article>
                 </div>

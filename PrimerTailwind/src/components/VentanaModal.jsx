@@ -44,7 +44,7 @@ const VentanaModal = ({modal, setModal, guardarComentarios, editarComentario, se
     <section className="flex flex-col bg-slate-800 opacity-90 w-4/5 mx-auto rounded-3xl ">
       
       <div className=" m-5 w-10 h-10 ">
-        <img src="../../public/cerrar.svg" alt="boton cerrar" className="" onClick={handleCloseModal} />
+        <img src="../cerrar.svg" alt="boton cerrar" className="" onClick={handleCloseModal} />
       </div>
       
       <form action="" 
